@@ -34,6 +34,22 @@ stock Default 7.0 theme. The mixer gets three layouts (each also in 150% and
 | **Classic compact fader** | 64 px | same, with a 24 px volume fader to the left of a narrower meter |
 | **Classic ultra compact** | 29 px | channel number, track name, 26 px meter, mute, rec arm (no solo) |
 
+### Screenshots
+
+32 rec-armed tracks in each layout.
+
+**Classic compact** (default)
+
+![Classic compact layout](screenshots/classic-compact.png)
+
+**Classic compact fader**
+
+![Classic compact fader layout](screenshots/classic-compact-fader.png)
+
+**Classic ultra compact**
+
+![Classic ultra compact layout](screenshots/classic-ultra-compact.png)
+
 Details:
 
 - Dark strips (`#262626`) separated by a small gap (`#333333`); selected tracks
