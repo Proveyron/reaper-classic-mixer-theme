@@ -1,3 +1,5 @@
+Created by [@lucas.silva.audio](https://www.instagram.com/lucas.silva.audio/)
+
 # Default 7.0 Compact Mixer — REAPER theme
 
 A REAPER 7 theme that keeps the stock **Default 7.0** look and adds compact,
