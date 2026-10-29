@@ -34,8 +34,10 @@ Details:
 
 - Dark strips (`#262626`) separated by a small gap (`#333333`); selected tracks
   get the 7.0 white highlight; track colours tint the strip.
-- Rec-armed meters are **green** instead of orange: green background, green level
-  bar and green scale numbers. Clips still turn the meter and the peak readout red.
+- Rec-armed meters are **green** instead of orange in every layout (Classic
+  mixer layouts, stock 7.0 mixer layouts A/B/C and the track panel): green
+  background, green level bar, green scale numbers and a green peak-readout box.
+  Clips still turn the meter and the peak readout red.
 - The 7.0 fader background is transparent, so only the fader slot and handle show.
 
 ## Built from
@@ -43,7 +45,14 @@ Details:
 - Cockos **Default 7.0** theme as shipped with REAPER 7.83 (`Default_7.0.ReaperThemeZip`).
 - Changes are in [`source/rtconfig.txt`](source/rtconfig.txt): macro `drawMcpClassic`
   plus its `Layout` blocks, and the default (unnamed) mixer layout points to it.
-- Edited images: `mcp_volbg.png` (all scales), `meter_strip_v.png`, `meter_clip_v.png`.
+- Edited images: `mcp_volbg.png` (all scales), `meter_strip_v.png`, `meter_strip_h.png`,
+  `meter_clip_v.png`.
+
+## Changelog
+
+- **v1.1** — green rec-armed meters in all layouts, including the stock 7.0 mixer
+  layouts and the track panel (vertical and horizontal meters).
+- **v1.0** — first release.
 
 ## License
 

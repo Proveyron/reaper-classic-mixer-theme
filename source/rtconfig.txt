@@ -214,6 +214,7 @@ macro drawTcp thisLayout Scale
 ;-- HOUSEKEEPING --
 
 clear tcp.*
+custom tcp.custom.ccReadoutBg ; declared first = topmost custom; only visible through the meter's transparent peak-readout box
 set Scale 										[Scale Scale Scale Scale Scale Scale Scale Scale] ; ohOK
 set tcp.size 									* Scale [300 100 40] 
 set singleRowH 									* Scale + 20 * 2 sectionMargin{0}
@@ -397,11 +398,13 @@ set tcpSectionRight3Margin 						+ tcp.custom.sectionRight3 sectionMarginXYWH
 set tcp.meter 									+ + tcp.custom.sectionMeter * Scale [Layout##thisLayout##-tcpMeterBorder{0} Layout##thisLayout##-tcpMeterBorder{0}] \
 													* -2 * Scale [0 0 Layout##thisLayout##-tcpMeterBorder{0} Layout##thisLayout##-tcpMeterBorder{0}]
 	set tcp.meter.vu.div                    	[Layout##thisLayout##-tcpMeterBorder{0}]
+set tcp.custom.ccReadoutBg 						tcp.meter
+	set tcp.custom.ccReadoutBg.color 			?recarm [0 0 0 0 30 58 43 255] [0 0 0 0 38 38 38 255] ; green readout box when rec-armed
 	set tcp.meter.readout.color             	?hide_meterValues{0} [0 0 0 0 0 0 0 0] * textBrightnessMult{0} [100 100 100 255 255 183 171 255]
 	set tcp.meter.scale.color.lit.bottom    	?hide_meterValues{0} [0 0 0 0 0 0 0 0] [0 0 0 170 0 0 0 0]
 	set tcp.meter.scale.color.lit.top       	?hide_meterValues{0} [0 0 0 0 0 0 0 0] [0 0 0 170 0 0 0 0]
-	set tcp.meter.scale.color.unlit.bottom  	?hide_meterValues{0} [0 0 0 0 0 0 0 0] ?recarm [255 64 0 255 0 0 0 0] + * - textBrightnessMult{0} 1 [0 0 0 100] [255 255 255 60 0 0 0 0]
-	set tcp.meter.scale.color.unlit.top     	?hide_meterValues{0} [0 0 0 0 0 0 0 0] ?recarm [255 64 0 255 0 0 0 0] + * - textBrightnessMult{0} 1 [0 0 0 100] [255 255 255 60 0 0 0 0]
+	set tcp.meter.scale.color.unlit.bottom  	?hide_meterValues{0} [0 0 0 0 0 0 0 0] ?recarm [61 220 132 255 0 0 0 0] + * - textBrightnessMult{0} 1 [0 0 0 100] [255 255 255 60 0 0 0 0]
+	set tcp.meter.scale.color.unlit.top     	?hide_meterValues{0} [0 0 0 0 0 0 0 0] ?recarm [61 220 132 255 0 0 0 0] + * - textBrightnessMult{0} 1 [0 0 0 100] [255 255 255 60 0 0 0 0]
 
 ;-- POPULATE MAIN --
 	
@@ -1209,6 +1212,7 @@ macro drawMcp thisLayout Scale
 ;-- HOUSEKEEPING --
 
 clear mcp.*
+custom mcp.custom.ccReadoutBg ; declared first = topmost custom; only visible through the meter's transparent peak-readout box
 
 set thisMcpfolderIndent						* folderdepth mcpfolderIndentSize
 set hAfterIndent							- h * Scale thisMcpfolderIndent{0}
@@ -1413,8 +1417,8 @@ set mcp.meter.vu.div                   		* Scale [1 1]
 	set showMcpMeterVals					?recarm ?Layout##thisLayout##-mcpMeterValsRecarm 1 0 ?track_selected ?Layout##thisLayout##-mcpMeterValsSel 1 0 ?Layout##thisLayout##-mcpMeterVals 1 0
 	set mcp.meter.scale.color.lit.bottom   	!showMcpMeterVals{0} [0 0 0 0 0 0 0 0] [0 0 0 170 0 0 0 0]
 	set mcp.meter.scale.color.lit.top      	!showMcpMeterVals{0} [0 0 0 0 0 0 0 0] [0 0 0 170 0 0 0 0]
-	set mcp.meter.scale.color.unlit.bottom 	!showMcpMeterVals{0} [0 0 0 0 0 0 0 0] ?recarm [255 64 0 255 0 0 0 0] + * - textBrightnessMult{0} 1 [0 0 0 100] [255 255 255 60 0 0 0 0]
-	set mcp.meter.scale.color.unlit.top    	!showMcpMeterVals{0} [0 0 0 0 0 0 0 0] ?recarm [255 64 0 255 0 0 0 0] + * - textBrightnessMult{0} 1 [0 0 0 100] [255 255 255 60 0 0 0 0]
+	set mcp.meter.scale.color.unlit.bottom 	!showMcpMeterVals{0} [0 0 0 0 0 0 0 0] ?recarm [61 220 132 255 0 0 0 0] + * - textBrightnessMult{0} 1 [0 0 0 100] [255 255 255 60 0 0 0 0]
+	set mcp.meter.scale.color.unlit.top    	!showMcpMeterVals{0} [0 0 0 0 0 0 0 0] ?recarm [61 220 132 255 0 0 0 0] + * - textBrightnessMult{0} 1 [0 0 0 100] [255 255 255 60 0 0 0 0]
 
 
 ;--Bottom Section & Sidebar--	
@@ -1581,6 +1585,8 @@ set mcp.fxlist.font 						+ * Scale [1 18 80 80] Scale{0}==1 [0] Scale{0}==1.5 [
 set mcp.sendlist.font 						+ * Scale [1 18 80 80] Scale{0}==1 [0] Scale{0}==1.5 [5] [10]	
 	set mcp.sendlist.margin 				* [Scale Scale Scale Scale 1 Scale Scale Scale] [2 0 0 0 0 0 0 0 2]
 front mcp.extmixer mcp.custom.mcp_selectionDot mcp.custom.mcp_selectionDotSel
+set mcp.custom.ccReadoutBg 					mcp.meter
+	set mcp.custom.ccReadoutBg.color 		?recarm [0 0 0 0 30 58 43 255] [0 0 0 0 38 38 38 255] ; green readout box when rec-armed
 	
 ;--MCP Size--
 	
