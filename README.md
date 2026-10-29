@@ -1,4 +1,4 @@
-# Default 7.0 Classic Mixer — REAPER theme
+# Default 7.0 Compact Mixer — REAPER theme
 
 A REAPER 7 theme that keeps the stock **Default 7.0** look and adds compact,
 Classic-1.x-style mixer strips, so dozens of tracks fit on one screen in
@@ -6,13 +6,15 @@ two or more rows.
 
 ## Download
 
-**[⬇ Download Default_7.0_ClassicMixer.ReaperThemeZip](https://github.com/Proveyron/reaper-classic-mixer-theme/releases/latest/download/Default_7.0_ClassicMixer.ReaperThemeZip)**
+**[⬇ Download Default_7.0_Compact_Mixer_v1.2.ReaperThemeZip](https://github.com/Proveyron/reaper-classic-mixer-theme/releases/download/v1.2/Default_7.0_Compact_Mixer_v1.2.ReaperThemeZip)** (v1.2)
 
-Or grab it from the [Releases page](https://github.com/Proveyron/reaper-classic-mixer-theme/releases/latest).
+Newer and older versions are on the [Releases page](https://github.com/Proveyron/reaper-classic-mixer-theme/releases/latest).
+The file name carries the version, so each version shows up in REAPER's theme
+list as **Default_7.0_Compact_Mixer_v&lt;version&gt;**.
 
 ## Install
 
-1. Download `Default_7.0_ClassicMixer.ReaperThemeZip`.
+1. Download `Default_7.0_Compact_Mixer_v1.2.ReaperThemeZip`.
 2. In REAPER: **Options → Themes → Load theme…** and pick the file
    (or drag it onto the REAPER window).
 3. Open the mixer (`Ctrl+M`). With **Show multiple rows of tracks when size
@@ -34,9 +36,9 @@ Details:
 
 - Dark strips (`#262626`) separated by a small gap (`#333333`); selected tracks
   get the 7.0 white highlight; track colours tint the strip.
-- Rec-armed meters are **green** instead of orange in every layout (Classic
-  mixer layouts, stock 7.0 mixer layouts A/B/C and the track panel): green
-  background, green level bar, green scale numbers and a green peak-readout box.
+- Rec-armed tracks are **green** instead of orange/red in every layout (Classic
+  mixer layouts, stock 7.0 mixer layouts A/B/C and the track panel): green meter
+  background, level bar, scale numbers and peak-readout box, and green track names.
   Clips still turn the meter and the peak readout red.
 - The 7.0 fader background is transparent, so only the fader slot and handle show.
 
@@ -50,9 +52,12 @@ Details:
 
 ## Changelog
 
+- **v1.2** — renamed to *Default 7.0 Compact Mixer* (theme file
+  `Default_7.0_Compact_Mixer_v1.2`); rec-armed track names are green instead of red
+  in the track panel and stock mixer layouts.
 - **v1.1** — green rec-armed meters in all layouts, including the stock 7.0 mixer
   layouts and the track panel (vertical and horizontal meters).
-- **v1.0** — first release.
+- **v1.0** — first release (as `Default_7.0_ClassicMixer`).
 
 ## License
 
