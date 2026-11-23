@@ -10,7 +10,7 @@ control at exactly the size and position of Default 7.0.
 
 ## Download
 
-**[⬇ Download Default_7.0_Compact_Mixer_v1.3.ReaperThemeZip](https://github.com/Proveyron/reaper-classic-mixer-theme/releases/download/v1.3/Default_7.0_Compact_Mixer_v1.3.ReaperThemeZip)** (v1.3)
+**[⬇ Download Default_7.0_Compact_Mixer_v1.4.ReaperThemeZip](https://github.com/Proveyron/reaper-classic-mixer-theme/releases/download/v1.4/Default_7.0_Compact_Mixer_v1.4.ReaperThemeZip)** (v1.4)
 
 Newer and older versions are on the [Releases page](https://github.com/Proveyron/reaper-classic-mixer-theme/releases/latest).
 The file name carries the version, so each version shows up in REAPER's theme
@@ -18,7 +18,7 @@ list as **Default_7.0_Compact_Mixer_v&lt;version&gt;**.
 
 ## Install
 
-1. Download `Default_7.0_Compact_Mixer_v1.3.ReaperThemeZip`.
+1. Download `Default_7.0_Compact_Mixer_v1.4.ReaperThemeZip`.
 2. In REAPER: **Options → Themes → Load theme…** and pick the file
    (or drag it onto the REAPER window).
 3. Open the mixer (`Ctrl+M`). With **Show multiple rows of tracks when size
@@ -35,6 +35,17 @@ Default 7.0 layout.
 | **Classic compact** (default) | 54 px | channel number, track name, 51 px meter with peak readout and dB scale, solo + mute, rec arm |
 | **Classic compact fader** | 64 px | same, with a 24 px volume fader to the left of a narrower meter |
 | **Classic ultra compact** | 29 px | channel number, track name, 26 px meter, mute, rec arm (no solo) |
+
+### High-DPI displays
+
+On a Retina Mac, a 4K monitor or any display scaled above 125 %, REAPER uses
+the matching 150 % / 200 % version of the selected layout automatically. The
+three Classic layouts are included in that mapping since v1.4, so they keep the
+same physical size as the stock panels instead of rendering at half size.
+
+If no mixer layout is explicitly selected, REAPER switches the default to the
+stock 200 % layout at high DPI — pick **Classic compact** (or another Classic
+layout) once and it will follow the display scaling.
 
 ### Screenshots
 
@@ -90,7 +101,12 @@ Details:
 
 ## Changelog
 
-- **v1.3** — LiveRig visuals: dark charcoal panels, LiveRig buttons, faders, knobs and
+- **v1.4** - fixed HiDPI scaling for the Classic layouts: *Classic compact*,
+  *Classic compact fader* and *Classic ultra compact* were missing from the DPI
+  translation map, so on a Retina Mac or other high-DPI display they stayed at
+  100 % and looked half-size. They now switch to their 150 % / 200 % version,
+  like the stock layouts.
+- **v1.3** - LiveRig visuals: dark charcoal panels, LiveRig buttons, faders, knobs and
   transport (same sizes and positions as before), amber selected track names, blue
   instead of green for meters, rec-armed tracks and activity, blue fader lines.
 - **v1.2** — renamed to *Default 7.0 Compact Mixer* (theme file
